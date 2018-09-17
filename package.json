@@ -1,0 +1,50 @@
+{
+  "name": "@idecardo/vue-pikaday",
+  "version": "0.1.0",
+  "description": "A Pikaday wrapper for VueJS 2",
+  "main": "dist/vue-pikaday.umd.js",
+  "module": "dist/vue-pikaday.esm.js",
+  "unpkg": "dist/vue-pikaday.min.js",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "datepicker",
+    "pikaday"
+  ],
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-pikaday.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-pikaday.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-pikaday.min.js",
+    "publish": "cross-env NODE_ENV=production npm run build"
+  },
+  "dependencies": {
+    "pikaday": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "rollup": "^0.65.2",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.3.2",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "author": "Ivan Rey De Cardo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idecardo/vue-pikaday"
+  },
+  "bugs": {
+    "url": "https://github.com/idecardo/vue-pikaday/issues"
+  },
+  "homepage": "https://github.com/idecardo/vue-pikaday#readme"
+}
